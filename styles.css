@@ -450,7 +450,7 @@ nav a:hover {
 @keyframes fadeIn {from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
-@keyframes rainbow {
+keyframes rainbow {
   0% { background-color: #FF0000; }    /* Red */
   14% { background-color: #FF7F00; }   /* Orange */
   28% { background-color: #FFFF00; }   /* Yellow */
