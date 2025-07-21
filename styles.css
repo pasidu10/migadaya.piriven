@@ -162,7 +162,7 @@ button:hover {
 
 
 @keyframes rainbowSteps {
-  0%, 28.57% { background-color: #FF0000; box-shadow: 0 0 20px #FF0000; }
+ 10%, 28.57% { background-color: #FF0000; box-shadow: 0 0 20px #FF0000; }
   28.58%, 42.85% { background-color: #FF7F00; box-shadow: 0 0 20px #FF7F00; }
   42.86%, 57.14% { background-color: #FFFF00; box-shadow: 0 0 20px #FFFF00; }
   57.15%, 71.42% { background-color: #00FF00; box-shadow: 0 0 20px #00FF00; }
