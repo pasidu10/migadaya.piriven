@@ -450,17 +450,19 @@ nav a:hover {
 @keyframes fadeIn {from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
-``
-  ```css
-@keyframes gradientBG {
-  20% { background-position: 10% 10%; }
-  50% { background-position: 10% 100%; }
-  100% { background-position: 10% 0%; }
+@keyframes rainbow {
+  0% { background-color: #FF0000; }    /* Red */
+  14% { background-color: #FF7F00; }   /* Orange */
+  28% { background-color: #FFFF00; }   /* Yellow */
+  42% { background-color: #00FF00; }   /* Green */
+  57% { background-color: #0000FF; }   /* Blue */
+  71% { background-color: #4B0082; }   /* Indigo */
+  85% { background-color: #8B00FF; }   /* Violet */
+  100% { background-color: #FF0000; }  /* Back to Red */
 }
 
 body {
-  background: linear-gradient(180deg, #ff6b6b, #fbc531, #4cd137, #00a8ff);
-  background-size: 100% 200%;
-  animation: gradientBG 1s linear infinite;
+  height: 100vh;
+  margin: 0;
+  animation: rainbow 14s linear infinite;
 }
-```
