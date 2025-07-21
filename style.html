@@ -82,5 +82,45 @@
   </div>
 </body>
 </html>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Background</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      animation: bgChange 10s infinite alternate;
+      transition: background 1s ease-in-out;
+    }
 
+    @keyframes bgChange {
+      0%   { background-color: #1e3c72; }
+      25%  { background-color: #2a5298; }
+      50%  { background-color: #ff5f6d; }
+      75%  { background-color: #ffc371; }
+      100% { background-color: #1e3c72; }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Great Pirivena</h1>
+  <p>Enjoy the peaceful and colorful vibes 🌈</p>
+</body>
+</html>
+```
   
