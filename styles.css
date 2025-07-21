@@ -440,29 +440,26 @@ nav a:hover {
 
 .card:hover {
   transform: scale(1.03);
+} rainbow 2s linear infinite;
 }
 
-@keyframes slideDown {
-  from { transform: translateY(-100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fadeIn {from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-keyframes rainbow {
-  0% { background-color: #FF0000; }    /* Red */
-  14% { background-color: #FF7F00; }   /* Orange */
-  28% { background-color: #FFFF00; }   /* Yellow */
-  42% { background-color: #00FF00; }   /* Green */
-  57% { background-color: #0000FF; }   /* Blue */
-  71% { background-color: #4B0082; }   /* Indigo */
-  85% { background-color: #8B00FF; }   /* Violet */
-  100% { background-color: #FF0000; }  /* Back to Red */
+```css
+@keyframes rainbowSteps {
+  0%, 28.57% { background-color: #FF0000; box-shadow: 0 0 20px #FF0000; }
+  28.58%, 42.85% { background-color: #FF7F00; box-shadow: 0 0 20px #FF7F00; }
+  42.86%, 57.14% { background-color: #FFFF00; box-shadow: 0 0 20px #FFFF00; }
+  57.15%, 71.42% { background-color: #00FF00; box-shadow: 0 0 20px #00FF00; }
+  71.43%, 85.70% { background-color: #0000FF; box-shadow: 0 0 20px #0000FF; }
+  85.71%, 100% { background-color: #8B00FF; box-shadow: 0 0 20px #8B00FF; }
 }
 
 body {
   height: 100vh;
   margin: 0;
-  animation: rainbow 14s linear infinite;
+  background: linear-gradient(270deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8B00FF);
+  background-size: 1400% 1400%;
+  animation: rainbowSteps 14s steps(7) infinite;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
+  transition: background-color 0.5s ease;
 }
+```
