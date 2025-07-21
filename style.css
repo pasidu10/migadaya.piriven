@@ -1,3 +1,165 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header styles */
+header {
+  background-color: #006400; /* Dark Green */
+  padding: 20px 0;
+  color: #fff;
+}
+
+header h1 {
+  float: left;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+nav {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Clear floats */
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('your-image-path.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+/* Features / Content sections */
+.features, .content-section {
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.features .container, .content-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: #e0e0e0;
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 250px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer styles */
+footer {
+  background-color: #006400;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Contact form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #006400;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004d00;
+}
+
+@media (max-width: 768px) {
+  header h1, nav {
+    float: none;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  .features .container, .content-section .container {
+    flex-direction: column;
+  }
+  }
+
+
 
 @keyframes rainbowSteps {
   0%, 28.57% { background-color: #FF0000; box-shadow: 0 0 20px #FF0000; }
