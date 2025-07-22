@@ -179,3 +179,41 @@ body {
   filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
   transition: background-color 0.5s ease;
 }
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  animation: rainbowBg 14s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+@keyframes rainbowBg {
+  0%   { background-color: #ff0000; }
+  14%  { background-color: #ff7f00; }
+  28%  { background-color: #ffff00; }
+  42%  { background-color: #00ff00; }
+  57%  { background-color: #0000ff; }
+  71%  { background-color: #4b0082; }
+  85%  { background-color: #8f00ff; }
+  100% { background-color: #ff0000; }
+}
+
+.content h1 {
+  color: white;
+  font-size: 3em;
+  text-shadow: 0 0 20px #fff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  }
+  to {
+    text-shadow: 0 0 20px #ffd700, 0 0 30px #ff8c00;
+  }
+}
+```
